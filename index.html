@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#14752c">
+    <meta name="description" content="Helados, bebidas, tostadas, yaniqueques, tapados y jugos en La Romana.">
+    <title>De Jenny Morla Guzmán | Menú y pedidos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="#inicio">
+        <span>🍦</span> De Jenny Morla Guzmán
+    </a>
+
+    <nav class="nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#pedido">Mi pedido</a>
+    </nav>
+
+    <a class="cart-link" href="#pedido">
+        🛒 Carrito <span id="cart-count">0</span>
+    </a>
+</header>
+
+<main>
+    <section class="hero" id="inicio">
+        <div class="hero__content">
+            <span class="eyebrow">¡Todo rico, fresco y con mucho amor!</span>
+            <h1>De Jenny Morla Guzmán <span>¡Siempre fresquito!</span></h1>
+            <p>
+                Helados, agua, hielo, refrescos, tostadas,
+                yaniqueques, tapados y jugos.
+                ¡Elige tus favoritos y haz tu pedido!
+            </p>
+            <div class="hero__buttons">
+                <a class="button button--primary" href="#menu">Ver el menú</a>
+                <a class="button button--light" href="#pedido">Hacer mi pedido</a>
+            </div>
+            <p class="hero__location">📍 La Romana, República Dominicana</p>
+        </div>
+
+        <div class="hero__visual">
+            <img
+                src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=85"
+                alt="Helados de diferentes sabores"
+                fetchpriority="high">
+        </div>
+    </section>
+
+    <section class="benefits">
+        <article><span>🍦</span><div><h3>Helados</h3><p>Algo dulce para disfrutar.</p></div></article>
+        <article><span>🥤</span><div><h3>Bebidas frías</h3><p>Agua, refrescos y jugos.</p></div></article>
+        <article><span>🛵</span><div><h3>Delivery</h3><p>Consulta la disponibilidad.</p></div></article>
+    </section>
+
+    <section class="section" id="menu">
+        <div class="section-heading">
+            <span class="eyebrow">Elige tus favoritos</span>
+            <h2>Nuestro menú</h2>
+            <p>Agrega productos y cantidades al carrito.</p>
+        </div>
+
+        <div class="filters" aria-label="Filtrar menú">
+            <button class="filter filter--active" data-category="todos" aria-pressed="true">Todos</button>
+            <button class="filter" data-category="helados" aria-pressed="false">Helados</button>
+            <button class="filter" data-category="bebidas" aria-pressed="false">Bebidas y jugos</button>
+            <button class="filter" data-category="hielo-agua" aria-pressed="false">Hielo y agua</button>
+            <button class="filter" data-category="comidas" aria-pressed="false">Tostadas y frituras</button>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <section class="section order-section" id="pedido">
+        <div class="section-heading">
+            <span class="eyebrow">Tu pedido</span>
+            <h2>Carrito de compras</h2>
+            <p>Verifica los productos antes de continuar.</p>
+        </div>
+
+        <div class="order-layout">
+            <div class="panel">
+                <div class="panel__heading">
+                    <h3>Productos seleccionados</h3>
+                    <button id="clear-cart" class="text-button" type="button">Vaciar carrito</button>
+                </div>
+
+                <div id="cart-items">
+                    <p class="empty-cart">Todavía no has agregado productos.</p>
+                </div>
+
+                <div class="totals">
+                    <div class="total-row">
+                        <span>Subtotal</span><strong id="subtotal">RD$0.00</strong>
+                    </div>
+                    <div class="total-row total-row--final">
+                        <span>Total de productos</span><strong id="total">RD$0.00</strong>
+                    </div>
+                    <p class="muted small">El costo de delivery se confirma por WhatsApp.</p>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h3>Datos para el pedido</h3>
+                <form id="order-form">
+                    <div class="form-group">
+                        <label for="customer-name">Nombre completo</label>
+                        <input id="customer-name" type="text" maxlength="80" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-phone">Teléfono</label>
+                        <input id="customer-phone" type="tel" maxlength="20" autocomplete="tel" placeholder="8091234567" required>
+                    </div>
+
+                    <fieldset class="form-group">
+                        <legend>¿Cómo recibirás tu pedido?</legend>
+                        <label class="radio-option">
+                            <input type="radio" name="delivery" value="Recoger en el negocio" checked>
+                            Recoger en el negocio
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="delivery" value="Delivery">
+                            Delivery
+                        </label>
+                    </fieldset>
+
+                    <div class="form-group" id="address-group" hidden>
+                        <label for="address">Dirección de entrega</label>
+                        <textarea id="address" rows="3" maxlength="250" placeholder="Sector, calle y referencias"></textarea>
+                    </div>
+
+                    <button class="button button--primary button--full" type="submit">
+                        Preparar pedido por WhatsApp
+                    </button>
+                    <p id="status" class="status" role="status" aria-live="polite"></p>
+                    <p class="muted small">El pedido se enviará cuando revises el mensaje y pulses Enviar en WhatsApp.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="callout">
+        <div>
+            <span class="eyebrow">De Jenny Morla Guzmán</span>
+            <h2>¡Haz tu pedido!</h2>
+            <p>La Romana, República Dominicana</p>
+            <p>WhatsApp: 809-462-4113</p>
+        </div>
+        <a class="button button--light" href="https://wa.me/18094624113" target="_blank" rel="noopener noreferrer">
+            Escribir por WhatsApp
+        </a>
+    </section>
+</main>
+
+<footer class="footer">
+    <h2>🍦 De Jenny Morla Guzmán</h2>
+    <p>¡Todo rico, fresco y con mucho amor!</p>
+    <p>La Romana, RD · WhatsApp 809-462-4113</p>
+    <small>© <span id="year"></span> De Jenny Morla Guzmán</small>
+</footer>
+</body>
+</html>
