@@ -95,7 +95,7 @@ const productos = [
     },
     {
         id: 12,
-        nombre: "Tapado de longaniza o jamoneta",
+        nombre: "Tapados de longaniza o jamoneta",
         precio: 35,
         categoria: "comidas",
         imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReb47RISMhtQzTzbQ9PwZNpfkQLai9XmOog3nOxMc8af7uqYDEYaQkaio&s=10",
