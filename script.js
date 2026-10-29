@@ -6,18 +6,18 @@ const TELEFONO_RESTAURANTE = "18094624113";
 const productos = [
     {
         id: 1,
-        nombre: "Helado",
+        nombre: "Paletas",
         precio: 35,
         categoria: "helados",
-        imagen: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80",
+        imagen: "https://i.pinimg.com/originals/60/cb/bc/60cbbce7312f9923961e5d591eb5e643.jpg",
         descripcion: "Helado de distintos sabores."
     },
     {
         id: 2,
-        nombre: "Helado especial",
+        nombre: "Helados",
         precio: 50,
         categoria: "helados",
-        imagen: "https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=700&q=80",
+        imagen: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80",
         descripcion: "Una opción para disfrutar algo dulce."
     },
     {
@@ -25,7 +25,7 @@ const productos = [
         nombre: "Botellita de agua 500 ml",
         precio: 15,
         categoria: "bebidas",
-        imagen: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=700&q=80",
+        imagen: "https://cdn.almacen.do/2026/03/Agua-Planeta-Azul-16-fardo-2.jpg",
         descripcion: "Agua en botella de 500 ml."
     },
     {
@@ -33,7 +33,7 @@ const productos = [
         nombre: "Fundita de hielo",
         precio: 5,
         categoria: "hielo-agua",
-        imagen: "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=700&q=80",
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnAqLXJOSGdeVQ44i4jQYJIQZK5B3wCveO4JSsWK8U35rIAqaol4mlvxE7&s=10",
         descripcion: "Fundita de hielo."
     },
     {
@@ -41,7 +41,7 @@ const productos = [
         nombre: "Funditas de agua",
         precio: 5,
         categoria: "hielo-agua",
-        imagen: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=700&q=80",
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjuEIWRAaLKqTeOIqZiXrqEHUpVGSpf5NKQb4jVerp0cBRdO4lkgXwy7w&s=10",
         descripcion: "Promoción: 2 funditas por RD$5.",
         promocion: "agua"
     },
@@ -50,7 +50,7 @@ const productos = [
         nombre: "Refresco pequeño",
         precio: 15,
         categoria: "bebidas",
-        imagen: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=700&q=80",
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXXBEh_jApOa8NOgq6WvVWBTVghSRKh1clAQ2s7xwhyiAWZsSlOczBT5Y&s=10",
         descripcion: "Refresco. Precio según tamaño."
     },
     {
@@ -58,7 +58,7 @@ const productos = [
         nombre: "Refresco mediano",
         precio: 20,
         categoria: "bebidas",
-        imagen: "https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=700&q=80",
+        imagen: "https://www.surtidoraaurora.com.do/images/thumbs/2956279_refresco-coca-cola-250ml-121-.jpeg",
         descripcion: "Refresco. Precio según tamaño."
     },
     {
@@ -66,7 +66,7 @@ const productos = [
         nombre: "Refresco grande",
         precio: 30,
         categoria: "bebidas",
-        imagen: "https://images.unsplash.com/photo-1581636625402-29b2a704ef13?auto=format&fit=crop&w=700&q=80",
+        imagen: "https://i0.wp.com/www.ensegundos.do/wp-content/uploads/2011/10/Refrescos.png?quality=80&ssl=1",
         descripcion: "Refresco. Precio según tamaño."
     },
     {
@@ -82,7 +82,7 @@ const productos = [
         nombre: "Yaniqueque",
         precio: 5,
         categoria: "comidas",
-        imagen: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80",
+        imagen: "https://www.cocinadominicana.com/wp-content/uploads/2025/05/yaniqueque-recipe-dominican-GLZ0016.jpg",
         descripcion: "Yaniqueque crujiente."
     },
     {
@@ -98,7 +98,7 @@ const productos = [
         nombre: "Tapado de longaniza o jamoneta",
         precio: 35,
         categoria: "comidas",
-        imagen: "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=700&q=80",
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReb47RISMhtQzTzbQ9PwZNpfkQLai9XmOog3nOxMc8af7uqYDEYaQkaio&s=10",
         descripcion: "Tapado de longaniza o jamoneta."
     },
     {
@@ -106,7 +106,7 @@ const productos = [
         nombre: "Jugo natural",
         precio: 50,
         categoria: "bebidas",
-        imagen: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=700&q=80",
+        imagen: "https://media.istockphoto.com/id/1199220949/es/vector/un-vaso-de-jugo-de-naranja-fresco.jpg?s=612x612&w=0&k=20&c=oL9AXgeqFOoYqEAFbZ0N4AsHKNUC3PsYUPENixp3hjU=",
         descripcion: "Jugo refrescante."
     }
 ];
